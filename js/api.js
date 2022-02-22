@@ -21,10 +21,21 @@ function displayUser(x){
     const ul = document.getElementById('users');
     for(const user of x){
         const li = document.createElement('li')
-        li.innerText = `User ID: ${user.id}, 
-        User Name: ${user.name},
-        User Email: ${user.email}
+        li.innerText = `User Name: ${user.name}
         `
         ul.appendChild(li);
+    }
+}
+function showUserId(){
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(res => res.json())
+        .then(data => displayUserId(data))
+}
+function displayUserId(y){
+    const ul = document.getElementById('user-id')
+    for(const user of y){
+        const li = document.createElement('li')
+        li.innerText = `User ID:  <h1>${user.id}</h1>`
+        ul.appendChild(li)
     }
 }
