@@ -50,13 +50,14 @@ function showPhotos(photos){
     let count = 0
     for(const photo of photos){
         count = count + 1;
-        if(count < 20){
+        if(count <= 20){
             const h1 = document.createElement('h1')
             h1.style.textAlign = 'center'
             h1.style.color = 'orange'
             h1.style.backgroundColor = 'gray'
             h1.innerText = count
             const img = document.createElement('img')
+            img.height = '250'
             img.src = `${photo.url}`
             div.appendChild(h1)
             div.appendChild(img)
