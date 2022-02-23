@@ -52,6 +52,7 @@ function showPhotos(photos){
             h1.innerText = count
             const img = document.createElement('img')
             img.height = '250'
+            img.width = '450'
             img.src = `${photo.url}`
             div.appendChild(h1)
             div.appendChild(img)

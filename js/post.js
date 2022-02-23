@@ -15,4 +15,3 @@ function displayPosts(posts){
         postContainer.appendChild(div)
     }
 }
-loadPost()
