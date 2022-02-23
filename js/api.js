@@ -11,12 +11,6 @@ function loadUser(){
     
 }
 
-function loadPost(){
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(res => res.json())
-        .then(data => console.log(data))
-}
-
 function displayUser(x){
     const ul = document.getElementById('users');
     for(const user of x){
